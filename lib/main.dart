@@ -29,6 +29,10 @@ void main() async {
   await Firebase.initializeApp();
   await Hive.initFlutter();
   await Hive.openBox('appBox');
+  // Força idioma padrão PT-BR na inicialização
+  final appBox = Hive.box('appBox');
+  appBox.put('lCode', 'pt');
+  appBox.put('locale', {'lang': 'pt', 'country': 'BR'});
   await initializeNotifications();
   await setupOneSignal();
   notifires = ColorNotifires();
@@ -339,7 +343,6 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
                   locale: const Locale('pt', 'BR'),
                   supportedLocales: const [
                     Locale('pt', 'BR'),
-                    Locale('en', 'US'),
                   ],
                   localizationsDelegates: const [
                     AppLocalizations.delegate,

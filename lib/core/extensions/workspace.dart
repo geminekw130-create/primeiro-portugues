@@ -22,10 +22,7 @@ import '../utils/common_widget.dart';
 String token = "";
 
 final List locale = [
-
-  {'name': 'English', 'locale': "en"},
-  {'name': 'Arabic', 'locale': 'ar'},
-
+  {'name': 'Português (Brasil)', 'locale': 'pt'},
 ];
 
 bool isOnDuty = false;
