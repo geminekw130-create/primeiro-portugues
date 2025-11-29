@@ -46,7 +46,7 @@ dynamic oneSignalToken = "";
 dynamic oneSignalOptedIn = "";
 String bearerToken = box.get("bearerToken")??"";
 
-Locale appLocale = const Locale('en');
+Locale appLocale = const Locale('pt', 'BR');
 var latitudeGlobal = "";
 var longitudeGlobal = "";
 
