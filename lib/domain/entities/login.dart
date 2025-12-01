@@ -251,14 +251,15 @@ class Data {
   int get accountStatus => _accountStatus ?? 0;
 
   // ---------------------------
-  // SETTERS CORRETOS PARA SEU APP
+  // SETTERS PÚBLICOS
   // ---------------------------
+
   set firstNameSetter(String value) => _firstName = value;
-  set genderSetter(String value) => _gender = value;
+  set gender(String? value) => _gender = value;
   set profileImageSetter(dynamic value) => _profileImage = value;
 
   // ---------------------------
-  // TO JSON
+  // JSON
   // ---------------------------
 
   Map<String, dynamic> toJson() {
